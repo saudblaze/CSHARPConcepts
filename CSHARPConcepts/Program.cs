@@ -14,7 +14,9 @@ namespace CSHARPConcepts
 
             //Methodhiding();
 
-            MethodOverriding();
+            //MethodOverriding();
+
+            Swapping();
 
             Console.ReadLine();
         }
@@ -29,8 +31,14 @@ namespace CSHARPConcepts
             //base_classMethodOverriding b = new derived_classMethodOverriding();
             //b.gfgMethodOverriding();
 
-            MethodOverridingExample1(); // Method Overriding without using virtual and override modifiers
-            MethodOverridingExample2();
+            //MethodOverridingExample1(); // Method Overriding without using virtual and override modifiers
+            //MethodOverridingExample2();
+            //MethodOverridingExample3();
+            //MethodOverridingExample4();
+            //MethodOverridingExample5();
+
+
+            
         }
 
 
@@ -86,6 +94,76 @@ namespace CSHARPConcepts
             // it also invokes the method
             // 'show()' of class 'baseClass'
             obj.showMethodOverridingExample1();
+        }
+        public static void MethodOverridingExample2()
+        {
+            baseClassMethodOverridingExample2 obj;
+
+            // 'obj' is the object
+            // of class 'baseClass'
+            obj = new baseClassMethodOverridingExample2();
+
+            // it invokes 'show()'
+            // of class 'baseClass'
+            obj.show();
+
+
+            // the same object 'obj' is now
+            // the object of class 'derived'
+            obj = new derivedMethodOverridingExample2();
+
+            // it invokes 'show()' of class 'derived'
+            // 'show()' of class 'derived' is overridden
+            // for 'override' modifier
+            obj.show();
+        }
+        public static void MethodOverridingExample3()
+        {
+            // 'E' is object of class stream
+            // also works as object of
+            // class 'web'
+            stream E = new stream();
+
+
+            // it first invokes 'showdata()'
+            // of class 'web' then it invokes
+            // 'showdata()' of class 'stream'
+            E.showdata();
+        }
+        public static void MethodOverridingExample4()
+        {
+            // C# program to show how base keyword
+            // specifies the calling of base-class
+            // constructor from the derived class
+            // when derived class instances are created
+
+
+            // invoke no argument constructor
+            DerivedClass d1 = new DerivedClass();
+
+            Console.WriteLine();
+
+            // invoke parameterized constructor
+            DerivedClass d2 = new DerivedClass(10, 20);
+        }
+        public static void MethodOverridingExample5()
+        {
+            // C# program to show how 'base' keyword specifies
+            // the base-class constructor that called from
+            // derived class and also calling a method 'swap'
+            // from derived class using base keyword
+
+
+            // invoke no argument constructor
+            DerivedClassMethodOverridingExample5 d1 = new DerivedClassMethodOverridingExample5();
+
+            Console.WriteLine();
+
+            // invoke parameterized constructor
+            DerivedClassMethodOverridingExample5 d2 = new DerivedClassMethodOverridingExample5(10, 20);
+
+            // calling swap function
+            d2.swap();
         }
 
         public static void Methodhiding()
@@ -143,5 +221,23 @@ namespace CSHARPConcepts
 
             obj.memberByReversecasting();
         }
+
+        public static void Swapping()
+        {
+            int a = 12;
+            int b = 15;
+
+            Console.WriteLine("a = " + a + " b = " + b);
+            Console.WriteLine();
+
+            a = a + b;
+            b = a - b;
+            a = a - b;
+
+            Console.WriteLine("after swaaping a = " + a + " b = " + b);
+            Console.WriteLine();
+
+        }
+        
     }
 }

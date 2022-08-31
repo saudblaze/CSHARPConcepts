@@ -50,6 +50,10 @@
     <Compile Include="MethodOverloading.cs" />
     <Compile Include="MethodOverriding.cs" />
     <Compile Include="MethodOverridingExample1.cs" />
+    <Compile Include="MethodOverridingExample2.cs" />
+    <Compile Include="MethodOverridingExample3.cs" />
+    <Compile Include="MethodOverridingExample4.cs" />
+    <Compile Include="MethodOverridingExample5.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
